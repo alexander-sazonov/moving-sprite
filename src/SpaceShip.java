@@ -14,13 +14,17 @@ public class SpaceShip extends Sprite{
         bullets = new ArrayList<>();
     }
 
+    public List<Bullet> getBullets() {
+        return bullets;
+    }
+
     public void move(){
         x += dx;
         y += dy;
     }
 
     public void fire(){
-
+        bullets.add(new Bullet(x + width, y + height / 2));
     }
 
     public void keyPressed(KeyEvent e){
