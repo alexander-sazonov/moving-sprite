@@ -43,4 +43,8 @@ public abstract class Sprite {
     public void setVisible(boolean visible) {
         this.visible = visible;
     }
+
+    public Rectangle getBounds(){
+        return new Rectangle(x,y,width, height);
+    }
 }
